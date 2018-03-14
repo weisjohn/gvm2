@@ -72,6 +72,9 @@ export PATH="${RETVAL}"
 # @return Returns success (status 0) or failure (status 1).
 # */
 cd() {
+    builtin cd $*
+    return 0
+
     unset RETVAL
 
     # @FIXME: gvm_oldcd is broken on re-sourcing .bashrc!
